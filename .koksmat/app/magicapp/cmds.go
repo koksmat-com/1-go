@@ -1,4 +1,3 @@
-
 package magicapp
 
 import (
@@ -8,11 +7,11 @@ import (
 	"runtime/debug"
 	"strings"
 
-	"github.com/365admin/1-go/endpoints"
-	"github.com/365admin/1-go/cmds"
 	"github.com/spf13/cobra"
 	"github.com/swaggest/rest/web"
 	swgui "github.com/swaggest/swgui/v4emb"
+
+	"github.com/365admin/1-go/endpoints"
 )
 
 func StartAPIServer(title string, version string, description string, port int) {
@@ -41,6 +40,7 @@ func StartAPIServer(title string, version string, description string, port int) 
 		log.Fatal(err)
 	}
 }
+
 func RegisterServeCmd(title string, description string, version string, port int) {
 	listCmd := &cobra.Command{
 		Use:   "serve",

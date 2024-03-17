@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -7,7 +6,6 @@ import (
 
 	"github.com/365admin/1-go/magicapp"
 )
-
 
 func main() {
 	info, _ := debug.ReadBuildInfo()
@@ -20,8 +18,11 @@ title: 1-go
 description: Describe the main purpose of this kitchen
 ---
 
+# 
+
 # 1-go
-`
+
+![](2024-03-05-18-19-26.png)`
 	magicapp.Setup(".env")
 	magicapp.RegisterServeCmd("1-go", description, "0.0.1", 8080)
 	magicapp.RegisterCmds()
