@@ -2,13 +2,13 @@
 title: Get Workdir
 ---#>
 
-if ($env:WORKDIR -eq $null) {
+if ($null -eq $env:WORKDIR ) {
     $env:WORKDIR = join-path $psscriptroot ".." ".koksmat" "workdir"
 }
-$workdir =  $env:WORKDIR
+$workdir = $env:WORKDIR
 
 if (-not (Test-Path $workdir)) {
-    $x = New-Item -Path $workdir -ItemType Directory 
+    New-Item -Path $workdir -ItemType Directory | Out-Null
 }
 
 $workdir = Resolve-Path $workdir
